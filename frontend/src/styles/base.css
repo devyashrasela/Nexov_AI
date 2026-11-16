@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; background: var(--bg-surface); color: var(--text-primary); }
+button, input { font: inherit; }
+button { cursor: pointer; }
+.viewport { width: 90%; height: 90vh; min-height: 650px; margin: 5vh auto; display: flex; flex-direction: column; }
+.header { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; margin-bottom: 24px; border-bottom: 1px solid var(--border-subtle); }
+.brand { display: flex; align-items: center; gap: 12px; font-size: 20px; font-weight: 700; }
+.brand-icon { color: var(--brand-primary); }
+.brand-subtitle { margin-left: 8px; padding-left: 12px; border-left: 1px solid var(--border-subtle); color: var(--text-muted); font-size: 14px; font-weight: 400; }
+.dashboard-grid { display: grid; grid-template-columns: 380px minmax(0, 1fr); gap: 24px; flex: 1; min-height: 0; }
+.left-col, .right-col { display: flex; flex-direction: column; gap: 24px; min-height: 0; }
+.left-col .transcript-card, .right-col .appointments-card { flex: 1; min-height: 0; }
+.card { display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--border-subtle); border-radius: 16px; background: var(--bg-surface); }
+.card-header { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; border-bottom: 1px solid var(--border-subtle); font-size: 16px; font-weight: 600; }
+.panel-title { width: 100%; font-size: 16px; font-weight: 600; }
+.empty-state { padding: 24px; color: var(--text-muted); text-align: center; }
+@media (max-width: 1099px) { .viewport { width: calc(100% - 32px); height: auto; min-height: 100vh; margin: 0 auto; } .dashboard-grid { grid-template-columns: 1fr; } .left-col, .right-col { min-height: auto; } .transcript-card, .appointments-card { min-height: 360px; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }

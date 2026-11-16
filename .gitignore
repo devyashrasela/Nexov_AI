@@ -1,0 +1,16 @@
+.env
+*.db
+*.sqlite
+ca.pem
+.venv/
+.litellm-venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+node_modules/
+dist/
+coverage/
+medivoice-final-dashboard.html
+PROJECT_SPEC.md
+SDE_Intern_Round1_Assignment.pdf
